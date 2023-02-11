@@ -1,0 +1,12 @@
+.info {
+  text-align: center;
+}
+
+.pieces {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}

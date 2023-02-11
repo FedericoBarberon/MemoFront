@@ -1,0 +1,29 @@
+.piece {
+  background-color: transparent;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  display: flex;
+  cursor: pointer;
+  transition: transform .3s;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  position: relative;
+  user-select: none;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  cursor: default;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.back {
+  transform: rotateY(180deg);
+  position: absolute;
+  color: white;
+}
