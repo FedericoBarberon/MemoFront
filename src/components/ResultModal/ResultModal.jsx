@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
+import LoseModalContent from './LoseModalContent'
 import './resultModal.css'
+import WinModalContent from './WinModalContent'
 
 export default function ResultModal ({ result, time, piecesLeft }) {
   return (
@@ -7,16 +9,8 @@ export default function ResultModal ({ result, time, piecesLeft }) {
       <div className='content'>
         {
           result === 'win'
-            ? (
-              <>
-                <h1>Ganaste!</h1>
-                <p>Tiempo empleado: {time} segundos</p>
-              </>)
-            : (
-              <>
-                <h1>Perdiste!</h1>
-                <p>Pares restantes: {piecesLeft}</p>
-              </>)
+            ? <WinModalContent time={time} />
+            : <LoseModalContent piecesLeft={piecesLeft} />
         }
         <Link to='/' className='button-link'>Volver</Link>
       </div>
